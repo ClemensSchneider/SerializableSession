@@ -128,9 +128,6 @@ public class SessionTrackerValve extends ValveBase {
 
   void deSerialize(byte[] bytes) {
 
-    def manager = new StandardManager()
-    manager.container = tomcat.connector.container
-
     def bis = new ByteArrayInputStream(bytes)
 
     def ois = new CustomObjectInputStream(bis, getClass().classLoader)
